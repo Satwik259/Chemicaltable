@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chemical Supplies Manager</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Chemical Supplies Manager</h1>
+        <button id="addButton" onclick="addRow()">Add Chemical</button>
+        <button id="saveButton" onclick="saveData()">Save Data</button>
+      </header>
+
+      <table>
+        <thead>
+          <tr>
+            <th onclick="sortTable(0)">
+              ID <i class="fas fa-sort" id="sortIcon0"></i>
+            </th>
+            <th onclick="sortTable(1)">
+              Chemical Name <i class="fas fa-sort" id="sortIcon1"></i>
+            </th>
+            <th onclick="sortTable(2)">
+              Vendor <i class="fas fa-sort" id="sortIcon2"></i>
+            </th>
+            <th onclick="sortTable(3)">
+              Density (kg/m³) <i class="fas fa-sort" id="sortIcon3"></i>
+            </th>
+            <th onclick="sortTable(4)">
+              Viscosity (mPa·s) <i class="fas fa-sort" id="sortIcon4"></i>
+            </th>
+            <th onclick="sortTable(5)">
+              Packaging <i class="fas fa-sort" id="sortIcon5"></i>
+            </th>
+            <th onclick="sortTable(6)">
+              Pack Size <i class="fas fa-sort" id="sortIcon6"></i>
+            </th>
+            <th onclick="sortTable(7)">
+              Unit <i class="fas fa-sort" id="sortIcon7"></i>
+            </th>
+            <th onclick="sortTable(8)">
+              Quantity <i class="fas fa-sort" id="sortIcon8"></i>
+            </th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <aside id="sidebar">
+      <div class="sidebar-content">
+        <h2>Edit Chemical</h2>
+        <label for="chemicalName">Chemical Name:</label>
+        <input type="text" id="chemicalName" />
+
+        <label for="vendor">Vendor:</label>
+        <input type="text" id="vendor" />
+
+        <label for="density">Density:</label>
+        <input type="number" id="density" />
+
+        <label for="viscosity">Viscosity:</label>
+        <input type="number" id="viscosity" />
+
+        <label for="packaging">Packaging:</label>
+        <input type="text" id="packaging" />
+
+        <label for="packSize">Pack Size:</label>
+        <input type="number" id="packSize" />
+
+        <label for="unit">Unit:</label>
+        <input type="text" id="unit" />
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" />
+
+        <button id="saveEditButton" onclick="saveEdit()">Save</button>
+        <button id="closeButton" onclick="closeSidebar()">Close</button>
+      </div>
+    </aside>
+
+    <script src="index.js"></script>
+  </body>
+</html>
